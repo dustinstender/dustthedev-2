@@ -1,11 +1,18 @@
 import './App.css';
+import { Cartoon } from './components/Cartoon';
+import { Words } from './components/Words';
 
 function App() {
 	return (
-		<div className="App">
-			<header className="App-header">
-				<h1>Hello, World</h1>
-			</header>
+		<div
+			style={{
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+			}}
+		>
+			<Words />
+			<Cartoon />
 		</div>
 	);
 }
