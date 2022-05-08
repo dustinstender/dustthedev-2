@@ -4,13 +4,7 @@ import { Words } from './components/Words';
 
 function App() {
 	return (
-		<div
-			style={{
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-			}}
-		>
+		<div className="home">
 			<Words />
 			<Cartoon />
 		</div>
