@@ -10,15 +10,36 @@
 	justify-content: center;
 }
 
+h1 {
+	font-size: 4em;
+	width: 100%;
+}
+
+p {
+	color: #22313f;
+	font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	color: #877b6e;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none; /* no underline */
+}
+
+a:hover {
+	color: white;
+}
+
 .cartoon {
-	padding-left: 100px;
+	padding-left: 20%;
 }
 
 .words {
-	padding-left: 100px;
+	padding-right: 50%;
 }
 
-.h1 {
+h1 {
 	color: #22313f;
 	font-family: 'Roboto', sans-serif;
 }

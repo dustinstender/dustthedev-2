@@ -5,8 +5,12 @@ import { Words } from './components/Words';
 function App() {
 	return (
 		<div className="home">
-			<Words />
-			<Cartoon />
+			<div>
+				<Words />
+			</div>
+			<div>
+				<Cartoon />
+			</div>
 		</div>
 	);
 }
