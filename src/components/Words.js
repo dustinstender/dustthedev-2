@@ -4,7 +4,7 @@ export function Words(props) {
 			<button
 				className="button"
 				onClick={() => {
-					props.setTheme('nothing');
+					props.setTheme('dark-mode');
 				}}
 			></button>
 			<h1 className="h1">Hello, I'm Dustin.</h1>
