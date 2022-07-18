@@ -10,6 +10,16 @@
 	justify-content: center;
 }
 
+.nothing {
+  background-color: white;
+}
+
+.button {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+
 h1 {
 	font-size: 4em;
 	width: 100%;
@@ -22,13 +32,13 @@ p {
 }
 
 a {
-	color: #877b6e;
+	color: #22313f;
 	font-family: 'Roboto', sans-serif;
 	text-decoration: none; /* no underline */
 }
 
 a:hover {
-	color: white;
+	color: #877b6e;
 }
 
 .cartoon {

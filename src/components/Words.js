@@ -1,6 +1,12 @@
-export function Words() {
+export function Words(props) {
 	return (
 		<div className="words">
+			<button
+				className="button"
+				onClick={() => {
+					props.setTheme('nothing');
+				}}
+			></button>
 			<h1 className="h1">Hello, I'm Dustin.</h1>
 			<p style={{ paddingBottom: '50%', width: '400px' }}>
 				You can see what I've been up to on{' '}
