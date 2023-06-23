@@ -1,14 +1,29 @@
-export function Words(props) {
+import { useState } from "react";
+import { getRecentlyPlayedTrackData } from "../api/getRecentlyPlayedTrackData";
+import { Spotify } from "react-spotify-embed";
+
+export function Words() {
+
+	const [songData, setSongData] = useState(undefined)
+
+	const retrieveSongData = async () => {
+		if (!songData) {
+			try {
+				const songData = await getRecentlyPlayedTrackData();
+				setSongData(songData)
+			
+			  } catch (error) {
+				console.error('Error retrieving song data:', error);
+			  }
+		}
+	}
+
+	retrieveSongData()
+
 	return (
 		<div className="words">
-			<button
-				className="button"
-				onClick={() => {
-					props.setTheme('dark-mode');
-				}}
-			></button>
 			<h1 className="h1">Hello, I'm Dustin.</h1>
-			<p style={{ paddingBottom: '50%', width: '400px' }}>
+			<p style={{ width: '400px' }}>
 				You can see what I've been up to on{' '}
 				<a
 					target="_blank"
@@ -25,6 +40,10 @@ export function Words(props) {
 				>
 					Youtube.
 				</a>
+				<br></br>
+				<br></br>
+				<p style={{fontSize: 14}} >What I'm currently listening to:</p>
+				{songData && <Spotify height={300} width={300} link={songData.external_urls.spotify} />}
 			</p>
 		</div>
 	);
