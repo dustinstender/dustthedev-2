@@ -17,13 +17,13 @@ p {
 }
 
 a {
-	color: #22313f;
+	color: #AB6722;
 	font-family: 'Roboto', sans-serif;
 	text-decoration: none; /* no underline */
 }
 
 a:hover {
-	color: #877b6e;
+	color: #22313f;
 }
 
 .cartoon {

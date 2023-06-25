@@ -24,7 +24,7 @@ export function Words() {
 		<div className="words">
 			<h1 className="h1">Hello, I'm Dustin.</h1>
 			<p style={{ width: '400px' }}>
-				You can see what I've been up to on{' '}
+				You can see what I've been coding on{' '}
 				<a
 					target="_blank"
 					href="https://github.com/dustinstender"
@@ -38,12 +38,10 @@ export function Words() {
 					href="https://www.youtube.com/channel/UCBHIfq8H3aqcuuLDzkUaTNw"
 					rel="noreferrer"
 				>
-					Youtube.
-				</a>
-				<br></br>
-				<br></br>
-				<p style={{fontSize: 14}} >What I'm currently listening to:</p>
-				{songData && <Spotify height={300} width={300} link={songData.external_urls.spotify} />}
+					Youtube
+				</a>.
+				<p style={{fontSize: 14, paddingTop: 5}} >What I'm currently listening to:</p>
+				{songData && <Spotify wide link={songData.external_urls.spotify} />}
 			</p>
 		</div>
 	);
