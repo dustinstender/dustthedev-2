@@ -23,7 +23,7 @@ export function Words({ isWideScreen }) {
 			<h1 className={isWideScreen ? 'title-wide' : 'title-mobile'}>
 				Hello, I'm Dustin.
 			</h1>
-			<p style={{ width: isWideScreen ? 300 : 300 }}>
+			<p style={{ width: isWideScreen ? 400 : 250 }}>
 				You can see what I've been coding on{' '}
 				<a href="https://github.com/dustinstender">GitHub</a>. You can find some
 				skate videos on my{' '}
@@ -37,7 +37,7 @@ export function Words({ isWideScreen }) {
 				{songData && (
 					<Spotify
 						wide
-						width={isWideScreen ? 300 : 300}
+						width={isWideScreen ? 300 : 250}
 						link={songData.external_urls.spotify}
 					/>
 				)}
