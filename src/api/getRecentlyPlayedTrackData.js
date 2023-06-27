@@ -1,5 +1,4 @@
 const getAccessToken = async () => {
-    console.log(process.env.REACT_APP_REFRESH_TOKEN)
     try {
         const response = await fetch('https://accounts.spotify.com/api/token', {
         method: 'POST',
