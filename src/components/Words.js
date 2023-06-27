@@ -18,12 +18,12 @@ export function Words({ isWideScreen }) {
 
 	retrieveSongData();
 
-	const wordsStyle = isWideScreen ? '50%' : '';
-
 	return (
-		<div style={{ paddingRight: wordsStyle }}>
-			<h1 className="h1">Hello, I'm Dustin.</h1>
-			<p style={{ width: '400px' }}>
+		<div style={{ paddingRight: isWideScreen ? '50%' : '' }}>
+			<h1 className={isWideScreen ? 'title-wide' : 'title-mobile'}>
+				Hello, I'm Dustin.
+			</h1>
+			<p style={{ width: isWideScreen ? 300 : 300 }}>
 				You can see what I've been coding on{' '}
 				<a href="https://github.com/dustinstender">GitHub</a>. You can find some
 				skate videos on my{' '}
@@ -34,7 +34,13 @@ export function Words({ isWideScreen }) {
 				<p style={{ fontSize: 14, paddingTop: 5 }}>
 					What I'm currently listening to:
 				</p>
-				{songData && <Spotify wide link={songData.external_urls.spotify} />}
+				{songData && (
+					<Spotify
+						wide
+						width={isWideScreen ? 300 : 300}
+						link={songData.external_urls.spotify}
+					/>
+				)}
 			</p>
 		</div>
 	);

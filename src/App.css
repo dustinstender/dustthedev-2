@@ -46,9 +46,15 @@ a:hover::before {
 	padding-left: 20%;
 }
 
-h1 {
+.title-wide {
 	color: #22313f;
 	font-family: 'Roboto', sans-serif;
 	font-size: 4em;
 	width: 100%;
+}
+
+.title-mobile {
+	color: #22313f;
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
 }
