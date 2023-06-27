@@ -17,13 +17,25 @@ p {
 }
 
 a {
-	color: #AB6722;
-	font-family: 'Roboto', sans-serif;
-	text-decoration: none; /* no underline */
+	text-decoration: none;
+	color: #18272F;
+	position: relative;
 }
 
-a:hover {
-	color: #22313f;
+a::before {
+	content: '';
+	background-color: hsla(196, 61%, 58%, .75);
+	position: absolute;
+	left: 0;
+	bottom: 3px;
+	width: 100%;
+	height: 4px;
+	transition: all .3s ease-in-out;
+}
+
+a:hover::before {
+	bottom: 0;
+	height: 100%;
 }
 
 .cartoon {

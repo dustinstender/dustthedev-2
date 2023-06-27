@@ -26,17 +26,13 @@ export function Words() {
 			<p style={{ width: '400px' }}>
 				You can see what I've been coding on{' '}
 				<a
-					target="_blank"
 					href="https://github.com/dustinstender"
-					rel="noreferrer"
 				>
-					GitHub.{' '}
-				</a>
+					GitHub
+				</a>.
 				You can find some skate videos on my{' '}
 				<a
-					target="_blank"
 					href="https://www.youtube.com/channel/UCBHIfq8H3aqcuuLDzkUaTNw"
-					rel="noreferrer"
 				>
 					Youtube
 				</a>.
