@@ -1,3 +1,7 @@
+body {
+	margin: 0;
+}
+
 .home {
 	background-image: linear-gradient(
 		105deg,
@@ -18,19 +22,19 @@ p {
 
 a {
 	text-decoration: none;
-	color: #18272F;
+	color: #18272f;
 	position: relative;
 }
 
 a::before {
 	content: '';
-	background-color: hsla(196, 61%, 58%, .75);
+	background-color: hsla(196, 61%, 58%, 0.75);
 	position: absolute;
 	left: 0;
 	bottom: 3px;
 	width: 100%;
 	height: 4px;
-	transition: all .3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 a:hover::before {
@@ -40,10 +44,6 @@ a:hover::before {
 
 .cartoon {
 	padding-left: 20%;
-}
-
-.words {
-	padding-right: 50%;
 }
 
 h1 {
