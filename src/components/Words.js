@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { getRecentlyPlayedTrackData } from '../api/getRecentlyPlayedTrackData';
 import { Spotify } from 'react-spotify-embed';
+import { css } from '@emotion/css';
 
 export function Words({ isWideScreen }) {
 	const [songData, setSongData] = useState(undefined);
@@ -20,7 +21,22 @@ export function Words({ isWideScreen }) {
 
 	return (
 		<div style={{ paddingRight: isWideScreen ? '50%' : '' }}>
-			<h1 className={isWideScreen ? 'title-wide' : 'title-mobile'}>
+			<h1
+				className={
+					isWideScreen
+						? css`
+								color: #22313f;
+								font-family: 'Roboto', sans-serif;
+								font-size: 4em;
+								width: 100%;
+						  `
+						: css`
+								color: #22313f;
+								font-family: 'Roboto', sans-serif;
+								font-size: 2em;
+						  `
+				}
+			>
 				Hello, I'm Dustin.
 			</h1>
 			<p style={{ width: isWideScreen ? 400 : 250 }}>

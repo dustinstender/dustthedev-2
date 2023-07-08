@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import { css } from '@emotion/css';
 import { Cartoon } from './components/Cartoon';
 import { Words } from './components/Words';
 
@@ -36,7 +37,19 @@ function App() {
 	}
 
 	return (
-		<div className="home">
+		<div
+			className={css`
+				background-image: linear-gradient(
+					105deg,
+					#f4f4f4 75%,
+					#22313f calc(75% + 2px)
+				);
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			`}
+		>
 			<div>
 				<Words isWideScreen={true} />
 			</div>
