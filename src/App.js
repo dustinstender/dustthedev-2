@@ -3,9 +3,11 @@ import './App.css';
 import { css } from '@emotion/css';
 import { Cartoon } from './components/Cartoon';
 import { Words } from './components/Words';
+import { PhotoGallery } from './components/PhotoGallery';
 
 function App() {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [view, setView] = useState('home');
 
 	useEffect(() => {
 		// Update the window width state when the window is resized
@@ -21,6 +23,20 @@ function App() {
 		};
 	}, []);
 
+	if (view === 'photos') {
+		return (
+			<div
+				style={{
+					minHeight: '100vh',
+					display: 'flex',
+					justifyContent: 'center',
+				}}
+			>
+				<PhotoGallery onBack={() => setView('home')} />
+			</div>
+		);
+	}
+
 	if (windowWidth < 800) {
 		return (
 			<div
@@ -31,7 +47,7 @@ function App() {
 					height: '100vh',
 				}}
 			>
-				<Words />
+				<Words onViewPhotos={() => setView('photos')} />
 			</div>
 		);
 	}
@@ -51,7 +67,7 @@ function App() {
 			`}
 		>
 			<div>
-				<Words isWideScreen={true} />
+				<Words isWideScreen={true} onViewPhotos={() => setView('photos')} />
 			</div>
 			<div>
 				<Cartoon />

@@ -3,7 +3,35 @@ import { getRecentlyPlayedTrackData } from '../api/getRecentlyPlayedTrackData';
 import { Spotify } from 'react-spotify-embed';
 import { css } from '@emotion/css';
 
-export function Words({ isWideScreen }) {
+const linkButtonStyle = css`
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	color: #18272f;
+	position: relative;
+
+	&::before {
+		content: '';
+		background-color: hsla(196, 61%, 58%, 0.75);
+		position: absolute;
+		left: 0;
+		bottom: 3px;
+		width: 100%;
+		height: 4px;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&:hover::before {
+		bottom: 0;
+		height: 100%;
+	}
+`;
+
+export function Words({ isWideScreen, onViewPhotos }) {
 	const [songData, setSongData] = useState(undefined);
 
 	const retrieveSongData = async () => {
@@ -46,6 +74,14 @@ export function Words({ isWideScreen }) {
 				<a href="https://www.youtube.com/channel/UCBHIfq8H3aqcuuLDzkUaTNw">
 					Youtube
 				</a>
+				. Here are some of my{' '}
+				<button
+					type="button"
+					className={linkButtonStyle}
+					onClick={onViewPhotos}
+				>
+					Photos
+				</button>
 				.
 				<p style={{ fontSize: 14, paddingTop: 5 }}>
 					What I'm currently listening to:
